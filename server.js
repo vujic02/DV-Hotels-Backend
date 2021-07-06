@@ -1,3 +1,4 @@
+require("dotenv").config();
 const cors = require("cors");
 const express = require("express");
 const mongoose = require("mongoose");
@@ -12,7 +13,7 @@ app.use(cors());
 
 // mongoose
 mongoose
-  .connect("mongodb://localhost/DvHotels", {
+  .connect(process.env.DATABASE_MONGODB, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
     useCreateIndex: true,

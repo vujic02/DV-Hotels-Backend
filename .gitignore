@@ -1,3 +1,9 @@
 /node_modules
 test.rest
 /scarping-stuff
+.env
+env
+/env
+/.env
+**/.env
+**/*.env

@@ -24,9 +24,9 @@ route.post("/", async (req, res) => {
       console.log(err);
 
       // error handling each scenario
-      if (err.keyPattern?.email) {
+      if (err.keyPattern.email) {
         return res.status(400).send("User with that email already exits");
-      } else if (err.errors?.name?.message) {
+      } else if (err.errors.name.message) {
         return res.status(400).send(err.errors.name.message);
       }
     }
