@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const app = express();
 const port = process.env.PORT || 3001;
 
-const { Login, Signup } = require("./controllers/index");
+const { Login, Signup, User } = require("./controllers/index");
 
 //parsers
 app.use(express.json());
@@ -33,7 +33,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/signup", Signup);
 app.use("/api/login", Login);
-
+app.use("/api/users", User);
 //listen
 app.listen(port, () => {
   console.log(`App is running on port ${port}`);
